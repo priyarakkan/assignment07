@@ -73,12 +73,12 @@ form.addEventListener('submit', (e) => {
             let row = e.target.parentElement;
             table.deleteRow(row.rowIndex);
             count--; 
-             
+    // SET A COUNT VARIABLE TO DISPLAY NEXT TO EMPLOYEES HEADER  
             document.getElementById('count').innerText=count;
         } 
     });
 
-// SET A COUNT VARIABLE TO DISPLAY NEXT TO EMPLOYEES HEADER
+
 
 
 
