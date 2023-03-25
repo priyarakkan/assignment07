@@ -10,7 +10,7 @@
         .card           {border: 1px solid black;}
         output          {font-size: 0.8em;}
     </style>
-    <script src="js/script.js" defer></script>
+    <script src="js/script2.js" defer></script>
 </head>
 <body>
     <header id="main-header" class="bg-dark text-white p-4 mb-3">
@@ -24,6 +24,7 @@
             <div class="col-lg-4 col-md-12 mb-4">
                 <div id="main" class="card card-body">
                     <h2 class="title mb-4">Add Employee</h2>
+                    <output class="container-fluid mb-4">Number of employees :</output>
                     <form action="" id="addForm">
                         <label for="id">8-Digit Employee ID</label><br>
                         <input type="text" maxlength="8" required id="id" class="form-control">
@@ -55,7 +56,7 @@
                 <div id="main" class="card card-body">
                     <h2 class="title mb-4">Employees <small><output id="empCount"></output></small></h2>
                     <table id="employees" class="table table-striped">
-                        <tr>
+                        <tr id="employeeRow">
                             <th>ID</th>
                             <th>Name</th>
                             <th>Ext</th>
