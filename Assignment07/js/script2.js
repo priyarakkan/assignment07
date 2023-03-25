@@ -18,7 +18,7 @@ form.addEventListener('submit', (e) => {
         let inputState =String(document.querySelector('#department').value);
       
 // INSERT A NEW ROW AT THE END OF THE EMPLOYEES TABLE
-        var newRow = table.insertRow(-1);
+        var newRow = table.insertRow(0);
     
 // INSERT A CELL FOR EACH ITEM WITHIN THE NEW ROW
         let cell1 = newRow.insertCell(0);
@@ -64,19 +64,21 @@ form.addEventListener('submit', (e) => {
 
 // INCREMENENT THE NUMBER OF EMPLOYEES IN THE TABLE
     count++;
+    document.getElementById('count').innerText=count;
+}); 
 
 // DELETE EMPLOYEE
-    newRow.addEventListener('click', (e) =>{
+    table.addEventListener('click', (e) =>{
         if (confirm('Are you sure to delete the employee?')) {
             let row = e.target.parentElement;
-            newRow.deleteRow(row.rowIndex);
-            count--;
-            
-        }
+            table.deleteRow(row.rowIndex);
+            count--; 
+             
+            document.getElementById('count').innerText=count;
+        } 
     });
 
 // SET A COUNT VARIABLE TO DISPLAY NEXT TO EMPLOYEES HEADER
 
-}); 
 
 
